@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+class Solution {
+public:
+    // Function to calculate delayed arrival time
+    int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
+        // Calculate the new arrival time
+        return (arrivalTime + delayedTime) % 24;
+    }
+};
+
+int main() {
+    Solution solution;
+
+    // Define the arrival time and delayed time directly
+    int arrivalTime = 23;  // Example arrival time (23:00)
+    int delayedTime = 2;   // Example delay (2 hours)
+
+    // Call the function and display the result
+    int newArrivalTime = solution.findDelayedArrivalTime(arrivalTime, delayedTime);
+    cout << "The new arrival time will be: " << newArrivalTime << ":00 hours." << endl;
+
+    return 0;
+}
